@@ -1,11 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
-Route::resource('categories', CategoryController::class);
+
+use App\Http\Controllers\FeaturesController;
+
+Route::resource('features', FeaturesController::class);
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get( '/login', 'App\Http\Controllers\LoginController@index'); 
-Route::get('/categories', 'App\Http\Controllers\CategoryController@index');
+
+Route::get('/EmpleoJohnrey', 'App\Http\Controllers\FeaturesController@index');
